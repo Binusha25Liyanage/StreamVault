@@ -3,12 +3,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Svg, Path, Circle } from 'react-native-svg';
 import { Colors } from '../theme/colors';
 import { TabParamList } from './types';
-
-// Placeholder imports - will create screens next
-const HomeScreen = () => null;
-const DownloadsScreen = () => null;
-const PlayerScreen = () => null;
-const SettingsScreen = () => null;
+import HomeScreen from '../screens/HomeScreen';
+import DownloadsScreen from '../screens/DownloadsScreen';
+import VideoPlayerScreen from '../screens/VideoPlayerScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator<TabParamList>();
 
