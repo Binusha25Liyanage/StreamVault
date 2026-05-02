@@ -49,5 +49,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>StreamVault saves downloaded videos to your library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>StreamVault accesses your library to save videos</string>
 </dict>
 </plist>

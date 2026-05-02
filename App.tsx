@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import 'react-native-gesture-handler';
 import 'react-native-get-random-values';
 import { RootNavigator } from './src/navigation/RootNavigator';
+import { ErrorBoundary } from './src/components/common/ErrorBoundary';
 import { useDownloadStore } from './src/store/downloadStore';
 import { useSettingsStore } from './src/store/settingsStore';
 import { Colors } from './src/theme/colors';
@@ -15,8 +16,10 @@ export default function App() {
   }, []);
 
   return (
-    <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
-      <RootNavigator />
-    </View>
+    <ErrorBoundary>
+      <View style={{ flex: 1, backgroundColor: Colors.bg.primary }}>
+        <RootNavigator />
+      </View>
+    </ErrorBoundary>
   );
 }

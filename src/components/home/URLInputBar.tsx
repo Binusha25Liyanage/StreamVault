@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Animated } from 'react-native';
 import { Svg, Path } from 'react-native-svg';
-import Clipboard from '@react-native-community/clipboard';
 import { Colors } from '../theme/colors';
 import { Typography } from '../theme/typography';
 import { Spacing } from '../theme/spacing';
@@ -37,6 +36,7 @@ export const URLInputBar: React.FC<URLInputBarProps> = ({ onFetch, loading = fal
 
   const handlePaste = async () => {
     try {
+      const { Clipboard } = require('react-native');
       const clipboardText = await Clipboard.getString();
       setUrl(clipboardText);
     } catch (error) {
