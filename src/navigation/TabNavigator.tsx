@@ -5,7 +5,7 @@ import { Colors } from '../theme/colors';
 import { TabParamList } from './types';
 import HomeScreen from '../screens/HomeScreen';
 import DownloadsScreen from '../screens/DownloadsScreen';
-import VideoPlayerScreen from '../screens/VideoPlayerScreen';
+import PlayerScreen from '../screens/PlayerScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const Tab = createBottomTabNavigator<TabParamList>();
